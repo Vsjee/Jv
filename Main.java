@@ -1,8 +1,12 @@
 import Recursion.Recursion;
+import SongTask.SongTask;
 
 public class Main {
   public static void main(String[] args) {
-    int res = Recursion.powerOf(2, 10);
-    System.out.println(res);
+    Recursion recursionTask = new Recursion();
+    recursionTask.start();
+
+    SongTask songTask = new SongTask();
+    songTask.start();
   }
 }
