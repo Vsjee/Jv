@@ -1,10 +1,15 @@
 package Recursion;
 import Utilities.ScanData;
+import Utilities.Separator;
 
 public class Recursion extends Thread {
+  ScanData sc = new ScanData();
+  Separator sp = new Separator();
+
   public void run() {
-    ScanData sc = new ScanData();
     System.out.println("We are going to calculate the power of a number");
+
+    sp.separator();
 
     while(true) {
       System.out.print("Enter the number: ");
@@ -13,7 +18,7 @@ public class Recursion extends Thread {
       int exp = Integer.parseInt(sc.scanData());
       
       int res = powerOf(num, exp);
-      System.out.println(res);
+      System.out.println("Result: "+res);
 
       System.out.print("Want to make another power calculation? (y/n): ");
       String wantToContinue = sc.scanData().toLowerCase();
@@ -25,6 +30,8 @@ public class Recursion extends Thread {
       } else {
         System.out.println("Okei");
       }
+
+      sp.separator();
     }
   }
 
